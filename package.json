@@ -9,6 +9,7 @@
   "author": "Dinaco",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "ytdl-core": "^4.11.4"
   }
 }
