@@ -10,7 +10,7 @@ const options = {
 };
 
 app.get('/watch', async (req, res) => {
-    const url = req.query.v; // получаем URL видео из запроса
+    const url = `https://youtube.com/watch?v=${req.query.v}`; // получаем URL видео из запроса
 
     if (!url || !ytdl.validateURL(url)) {
         res.status(400).send('Неверный URL видео');
