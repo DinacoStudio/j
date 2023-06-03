@@ -57,7 +57,12 @@ function translit(word) {
         }
     }
 
-    return answer;
+    return removeInvalidChars(answer);
+}
+
+function removeInvalidChars(s) {
+    const withEmojis = /\p{Extended_Pictographic}/ug
+    return s.replaceAll(withEmojis, '');
 }
 
 https.createServer(options, app).listen(process.env.PORT || 3000, () => {
