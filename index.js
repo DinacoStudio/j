@@ -2,7 +2,7 @@ const https = require('https');
 const fs = require('fs');
 const express = require('express');
 const app = express();
-const ytdl = require('ytdl-core');
+const ytdl = require('ytdl-core-muxer');
 
 const options = {
     key: fs.readFileSync('private.key'),
