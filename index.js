@@ -9,8 +9,8 @@ const options = {
     cert: fs.readFileSync('certificate.crt')
 };
 
-app.get('/download', async (req, res) => {
-    const url = req.query.url; // получаем URL видео из запроса
+app.get('/watch', async (req, res) => {
+    const url = req.query.v; // получаем URL видео из запроса
 
     if (!url || !ytdl.validateURL(url)) {
         res.status(400).send('Неверный URL видео');
